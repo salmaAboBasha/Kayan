@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Staff</title>
+</head>
+<body>
+<h1> StaffDetails </h1>
+<form method="post" th:object="${post}">
+<label for="id">Id</label>
+<br>
+    <input type="text" id="id" th:field="*{id}">
+    <label for="name">Name</label>
+    <br>
+    <input type="text" id="name" th:field="*{name}">
+    <br>
+    <label for="salary">Salary</label>
+    <input type="text" id="salary" th:field="*{salary}">>
+
+</form>
+</body>
+</html>
+
+<!--<div th:each="question : ${questions}">-->
+<!--    <div>-->
+<!--        <h2>Question:-->
+<!--            <span th:text="${question.question}">Sample Question</span>-->
+<!--        </h2>-->
+
+<!--        &lt;!&ndash; Check if answers exist &ndash;&gt;-->
+<!--        <div>-->
+<!--            <h3>Answers:</h3>-->
+<!--            <ul th:if="${not #lists.isEmpty(question.answers)}">-->
+<!--                <li th:each="answer : ${question.answers}" th:text="${answer.answer}">Sample Answer</li>-->
+<!--            </ul>-->
+<!--            &lt;!&ndash; If no answers, show a message &ndash;&gt;-->
+<!--            <p th:if="${#lists.isEmpty(question.answers)}">No answers available</p>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <hr>-->
+<!--</div>-->
